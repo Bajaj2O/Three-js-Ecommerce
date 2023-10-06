@@ -41,13 +41,13 @@ const Customizer = () => {
           prompt={prompt}
           setPrompt={setPrompt}
           generatingImg={generatingImg}
-          handleSubmit={() => null}
+          handleSubmit={() => handleSubmit("logo")}
         />
       default:
         return null;
     }
   }
-  {/*
+  
 
 const handleSubmit = async (type) => {
     if(!prompt) return alert("Please enter a prompt");
@@ -76,6 +76,7 @@ const handleSubmit = async (type) => {
     }
   }
 
+
   const handleDecals = (type, result) => {
     const decalType = DecalTypes[type];
 
@@ -85,19 +86,18 @@ const handleSubmit = async (type) => {
       handleActiveFilterTab(decalType.filterTab)
     }
   }
-*/}
 
   const handleActiveFilterTab = (tabName) => {
     switch (tabName) {
       case "logoShirt":
-        state.isLogoTexture = !activeFilterTab[tabName];
+        state.isLogoTexure = !activeFilterTab[tabName];
         break;
       case "stylishShirt":
-        state.isFullTexture = !activeFilterTab[tabName];
+        state.isFullTexure = !activeFilterTab[tabName];
         break;
       default:
-        state.isLogoTexture = true;
-        state.isFullTexture = false;
+        state.isLogoTexure = true;
+        state.isFullTexure = false;
         break;
     }
 
@@ -111,13 +111,13 @@ const handleSubmit = async (type) => {
     })
   }
 
-  // const readFile = (type) => {
-  //   reader(file)
-  //     .then((result) => {
-  //       handleDecals(type, result);
-  //       setActiveEditorTab("");
-  //     })
-  // }
+  const readFile = (type) => {
+    reader(file)
+      .then((result) => {
+        handleDecals(type, result);
+        setActiveEditorTab("");
+      })
+  }
 
   return (
     <AnimatePresence>

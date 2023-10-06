@@ -3,17 +3,14 @@ import Home from './pages/Home'
 import Customiser from './pages/Customiser'
 // import './App.css'
 
-function App() {
 
+function App() {
   return (
-    <main
-      className="App"
-    >
+    <main className="app transition-all ease-in">
       <Home />
-      {/*<CanvasModel />*/}
+      <CanvasModel />
       <Customiser />
-    </main>    
-        
+    </main>
   )
 }
 
