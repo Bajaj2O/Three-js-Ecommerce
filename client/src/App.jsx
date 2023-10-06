@@ -1,4 +1,4 @@
-import Canvas from './canvas'
+import CanvasModel from './canvas'
 import Home from './pages/Home'
 import Customiser from './pages/Customiser'
 // import './App.css'
@@ -10,7 +10,7 @@ function App() {
       className="App"
     >
       <Home />
-      <Canvas />
+      {/*<CanvasModel />*/}
       <Customiser />
     </main>    
         
