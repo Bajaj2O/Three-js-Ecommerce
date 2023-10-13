@@ -1,14 +1,15 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
-import state from '../store';
-import { CustomButton } from '../components';
+import state from '../../state'
+import  CustomButton  from '../../components/CustomButton';
 import {
     headContainerAnimation,
     headContentAnimation,
     headTextAnimation,
     slideAnimation
-} from '../config/motion';
+} from '../../config/motion';
+
 
 const Home = () => {
     const snap = useSnapshot(state);
@@ -16,11 +17,11 @@ const Home = () => {
     return (
         <AnimatePresence>
             <AnimatePresence>
-                {snap.intro && (
+                {(snap.intro && !snap.data) && (
                     <motion.section className="home" {...slideAnimation('left')}>
                         <motion.header {...slideAnimation("down")}>
                             <img
-                                src='./threejs.png'
+                                src='./s1.svg'
                                 alt="logo"
                                 className="w-8 h-8 object-contain"
                             />
@@ -29,7 +30,7 @@ const Home = () => {
                         <motion.div className="home-content" {...headContainerAnimation}>
                             <motion.div {...headTextAnimation}>
                                 <h1 className="head-text">
-                                    LET&apos;S <br className="xl:block hidden" /> DO IT.
+                                    LET&apos;S <br className="xl:block hidden" />DESIGN.
 
                                 </h1>
                             </motion.div>
@@ -38,7 +39,7 @@ const Home = () => {
                                 className="flex flex-col gap-5"
                             >
                                 <p className="max-w-md font-normal text-gray-600 text-base">
-                                    Create your unique and exclusive shirt with our brand-new 3D customization tool. <strong>Unleash your imagination</strong>{" "} and define your own style.
+                                    Create your unique  shoe with our 3D customization tool. <strong>Craft Shoes as Unique as You Are</strong>{" "} .
                                 </p>
 
                                 <CustomButton

@@ -28,7 +28,7 @@ html {
 }
 
 .head-text {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
+  @apply xl:text-[8rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
 }
 
 .download-btn {
@@ -65,7 +65,7 @@ html {
 
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);

@@ -1,15 +1,15 @@
-import CanvasModel from './canvas'
-import Home from './pages/Home'
-import Customiser from './pages/Customiser'
-// import './App.css'
-
+import GCanvas from '../components/Canvas';
+import Home from './pages/Home';
+import Customizer from './pages/Customiser';
+import Data from './pages/Data';
 
 function App() {
   return (
     <main className="app transition-all ease-in">
       <Home />
-      <CanvasModel />
-      <Customiser />
+      <Customizer/>
+      <GCanvas />
+      <Data/>
     </main>
   )
 }
